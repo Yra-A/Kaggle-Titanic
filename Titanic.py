@@ -59,8 +59,8 @@ model = Model()
 
 #损失函数 二分类交叉熵
 criterion = torch.nn.BCELoss(reduction = "mean")
-#随机梯度下降
-optimizer = torch.optim.SGD(model.parameters(), lr = 0.01)
+#Adam
+optimizer = torch.optim.Adam(model.parameters(), lr = 0.01)
 
 def train():
     for epoch in range(100):
